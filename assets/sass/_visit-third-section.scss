@@ -1,0 +1,135 @@
+.third-section {
+	position: relative;
+	display: flex;
+	flex-direction: column-reverse;
+	color: $darkgray;
+	margin-bottom: 2.25rem;
+	transition: all 300ms ease-in;
+
+  	@media #{$desktop} {
+		display: flex;
+		align-content: space-around;
+		flex-direction: row;
+  	}
+
+
+	.left-word {
+		background-color: white;
+    	text-align: center;
+    	padding: 0 1.625rem;
+		padding-top: 3.25rem;
+    
+    	@media #{$desktop} {
+			width: 50%;
+			padding: 6.25rem 1.25rem 1.5rem 2.875rem;
+			text-align: left;
+  		}
+    	
+    	h3 {
+    		margin-bottom: 1rem;
+		    -webkit-font-smoothing: antialiased;
+		    font-size: 1.3em;
+		    font-family: $reg-font;
+
+		    &:hover {
+				color: #b80f37;
+			}
+    	}
+
+    	p {
+    		line-height: 1.9;
+    		margin-bottom: 2.25rem;
+    		-webkit-font-smoothing: antialiased;
+    		font-family: $light-font;
+    	}
+
+    	.view-button {
+    		display: flex;
+    		max-width: 100%;
+    		margin-bottom: 2.25rem;
+
+    		@media #{$tablet} {
+				justify-content: center;
+
+			 }
+
+			 @media #{$desktop} {
+				justify-content: flex-start;
+			 }
+
+	    		
+    		.view-btn {
+    		  width: 100%;
+			  cursor: pointer;
+			  background-color: transparent;
+			  border: 1px solid #017E9F;
+			  font-family: $light-font;
+			  padding: .8625rem 2.7rem;
+			  font-size: 1rem;
+			  color: $darkgray;
+			  text-decoration: none;
+			  transition: all 0.2s ease-out 0s;
+
+			  	&:hover {
+			  		background-color: #017E9F;
+			  		color: #fff;
+			  	}
+
+			  	@media #{$tablet} {
+					width: auto;
+
+			  	}
+			  	@media #{$desktop} {
+					width: auto;
+
+			  	}
+
+    		}
+    	}
+	}
+
+	.left-word::after{
+			position: absolute;
+			content: '';
+			display: block;
+		    left: -.625rem;
+		    background: url(../img/triangle.svg) no-repeat bottom left;
+		    background-size: 100% 100%;
+		    -webkit-filter: drop-shadow(rgba(0,0,0,0.3) 0 -3px 1px);
+		    filter: drop-shadow(rgba(0,0,0,0.3) 0 -3px 1px);
+		    top: 17.5em;
+    		right: 0;
+		    // width: calc(100% + 20px);
+		    height: 1.25rem;
+
+		@media #{$desktop} {
+			-webkit-filter: drop-shadow(rgba(0,0,0,0.3) 3px -1px 1px);
+			filter: drop-shadow(rgba(0,0,0,0.3) 3px -1px 1px);
+			background-size: 100% 100%;
+			left: 50%;
+			top: 0;
+		    right: 50%;
+		    width: 3.75rem;
+		    height: 100%;
+		}
+	}
+
+	.right-img {
+		min-height: 300px;
+		background-size: cover;
+		background-position: center;
+		transition: all 300ms ease-in;
+		background-image: url(../img/nighthawk.jpg);
+		opacity: 1;
+
+		&.wp-right-img{
+    		opacity: 1;
+		}
+		
+		@media #{$desktop} {
+			width: 50%;
+			min-height: 80%;
+			margin-top: 2%;
+  		}
+	}
+}

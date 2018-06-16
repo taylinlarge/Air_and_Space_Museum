@@ -1,0 +1,163 @@
+.hero {
+	width: 100%;
+	height: 45rem;
+	background-image: linear-gradient(0deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../img/shuttle-hero.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	.hero-text {
+		color: white;
+	    display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+	    height: 100%;
+	    padding-left: 3%;
+
+	    h1 {
+	    	font-family: $reg-font;
+	    	font-size: 3em;
+	    	margin-bottom: 20px;
+
+	    	@media screen and (max-width: $desktop-bp) {
+	    		font-size: 1.5em;
+	    		margin-top: 25rem;
+	    		margin-bottom: 0;
+	    	}
+	    }
+
+	    h4 {
+			font-family: $reg-font;
+			@media screen and (max-width: $desktop-bp) {
+				display: none;
+			}
+	    }
+	}
+
+	.visit-bar {
+		position: relative;
+		display: flex;
+		font-family: $light-font;
+		font-size: 1.2em;
+		width: 50%;
+		margin: 0 auto;
+		color: white;
+		top: -140px;
+
+		@media screen and (max-width: $desktop-bp) {
+			display: none;
+		}
+			
+		.visit-bar__visit {
+			padding: 0 25px;
+			margin-left: -13%;
+			
+			&:before {
+			    content: "";
+			    position: absolute;
+			    background-color: rgba(255,255,255,0.5);
+			    height: 1px;
+			    top: 10px;
+			    left: -50%;
+			    width: 37%;
+			}
+
+		}
+
+		.clock {
+			display: flex;
+			align-items: center;
+			padding: 0 25px;
+			letter-spacing: 0.03rem;
+			font-size: .91rem;
+
+			 p {
+			 	padding-left: .3rem;
+			 }
+		}
+
+		.visit-bar__divider {
+			display: flex;
+			flex: 1;
+			background-color: rgba(255,255,255,0.5);
+			position: relative;
+			height: 1px;
+			top: 10px;
+		}
+
+		.last-divider {
+
+			&:after {
+				content: '';
+				position: absolute;
+				background-color: rgba(255,255,255,0.5);
+				height: 1px;
+				width: 50%;
+				left: 100%;
+			}
+		}
+	}
+
+
+	.visit-box {
+		position: absolute;
+		right: 0;
+		width: 250px;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		font-size: 1.2em;
+		top: 541px;
+
+		@media screen and (max-width: $desktop-bp) {
+	    	justify-content: flex-end;
+	    }
+
+		.visit-box__text {
+			display: flex;
+			align-items: center;
+		    justify-content: center;
+			width: 80%;
+		    height: 100%;
+		    padding: 0 10%;
+		    background-color: white;
+			font-family: $light-font;
+		    transition: all 0.2s linear;
+
+		    @media screen and (max-width: $desktop-bp) {
+		    	display: none;
+		    }
+
+		    &:hover {
+		    	background-color: $brand-blue;
+		    	color: white;
+
+		    	.fa-angle-right {
+		    		left: 15px;
+		    	}
+		    }
+
+		    .fa-angle-right {
+		    	position: relative;
+		    	margin-left: 10px;
+		    	left: 0;
+		    	transition: all 0.3s linear;
+		    }
+		}
+
+		.calender-icon-container {
+		    width: 20%;
+		    justify-content: center;
+		    display: flex;
+		    height: 100%;
+		    align-items: center;
+		    background-color: $brand-blue;
+		    color: white;
+
+		    @media screen and (max-width: $desktop-bp) {
+		    	border-radius: 50%;
+		    	margin-right: 10%;
+		    }
+		}
+	}
+}

@@ -1,0 +1,326 @@
+.footer-wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+    line-height: 1.9;
+    color: #fff;
+    font-family: $light-font;
+    -webkit-font-smoothing: antialiased; 
+
+	    @media #{$tablet} {
+			flex-direction: row;
+			align-content: space-around;				
+			text-align: left;
+
+	  	}
+	  	@media #{$desktop} {
+			align-content: space-around;
+			flex-direction: row;
+			text-align: left;
+			margin-top: -2.1rem;
+		}
+
+    a {
+    	color: #fff;
+    	text-decoration: none;
+
+    }
+
+    a:hover {
+    	color: white;
+    }
+
+    .icon {
+    	height: 2rem;
+    	fill: currentColor;
+    	width: 1.2rem;
+	    position: relative;
+	    // top: 0.52rem;
+	    color: #fff;
+
+    }
+
+	.footer-left {
+		background-color: #393939;
+		padding: 2.8125rem .625rem .25rem;
+		font-weight: 900;
+
+		@media #{$tablet} {
+			width: 30%;
+			flex: 4 4 auto;
+		    padding: 5.0625rem 0 0 2.25rem;
+		    
+			
+  		}
+  		@media #{$desktop} {
+			width: 19%;
+			padding: 5.8125rem 2.125rem 1.25rem;
+		    
+			
+  		}
+
+		.primary-links {
+
+			li {
+				margin-top: 1.1875rem;
+				margin-bottom: 2rem;
+				letter-spacing: 0.3px;
+			}
+		}
+
+		.footer-logo{
+    		margin-bottom: 1.0625rem;
+    		
+
+    		@media #{$tablet} {
+				
+  			}
+
+  			@media #{$desktop} {
+			
+  			}
+
+			img {
+				height: 68px;
+
+				@media #{$tablet}, #{$desktop} {
+					
+  				}
+			}
+		}
+
+		.footer-social-media{
+			display: flex;
+			justify-content: center;
+			align-content: space-around;
+			margin-bottom: 1em;
+
+			@media #{$tablet}, #{$desktop} {
+				justify-content: start;
+				margin-left: -20px;
+		
+  			}
+
+			.social-links {
+				display: flex;
+
+				li {
+					margin-right: 20px;
+
+					.icon-facebook, .icon-youtube {
+						width: 3rem;
+					}
+				}
+			}
+		}
+	}
+
+	.footer-left::after{
+		content: '';
+	    position: absolute;
+	    left: 0;
+	    width: 100%;
+	    height: 1.875rem;
+	    background: url(../img/triangle-footer.svg) no-repeat bottom left;
+	    background-size: 100% 100%;
+	    -webkit-filter: drop-shadow(rgba(0,0,0,0.3) 0 3px 1px);
+	    filter: drop-shadow(rgba(0,0,0,0.3) 0 3px 1px);
+
+	    @media #{$tablet} {
+			left: 29.27%;
+			top:0;
+			width: 11.333%;
+			height: 100%;
+		    background: url(../img/triangle-footer-up.svg) no-repeat bottom left;
+		    background-size: 100% 100%;
+		    -webkit-filter: drop-shadow(rgba(0,0,0,0.3) 3px 0 1px);
+		    filter: drop-shadow(rgba(0,0,0,0.3) 3px 0 1px);
+		}
+
+		@media #{$desktop} {
+			left: 19%;
+		    top: 0;
+		    width: 6.333%;
+		    height: 100%;
+		    background: url(../img/triangle-footer-up.svg) no-repeat bottom left;
+		    background-size: 100% 100%;
+		    -webkit-filter: drop-shadow(rgba(0, 0, 0, 0.3) 3px 0 1px);
+		    filter: drop-shadow(rgba(0, 0, 0, 0.3) 3px 0 1px);
+		}
+	}
+
+	.footer-right{
+		background-color: $darkgray;
+		-webkit-font-smoothing: antialiased;
+		padding-top: 3.5rem;
+
+		@media #{$tablet} {
+				min-height: 70%;
+				margin-top: 2.2%;
+				width: 71%;
+				padding-left: 22%;
+				padding-top: 2.5rem;
+		}
+
+		@media #{$desktop} {
+				padding-left: 7%;
+				display: flex;
+				justify-content: space-around;
+				flex-direction: row;
+				min-height: 70%;
+				margin-top: 2.2%;
+				width: 81%;
+				padding-bottom: 4.875rem;
+				padding-top: 2.5rem;
+		}
+
+
+		
+
+		.footer-about-museum {
+			margin-bottom: 2em;
+
+			@media #{$tablet}{
+			 	padding-left: 1.9375rem;
+			 	position: relative;
+			 	// margin-bottom: 3.875rem;
+			}
+
+			@media #{$desktop}{
+			 	position: relative;
+			 	display: flex;
+			 	justify-content: center;
+			 	flex-direction: column;
+			 	padding: 2.4375rem 1.5rem;
+			}
+
+			h1 {
+				font-size: 1.25em;
+				font-family: $reg-font;
+		       
+			}
+
+			p{
+				margin:0;
+				padding-left: 10px;
+			}
+
+			.apple{
+				height: 1.4em;
+				width: 1.4em;
+				right: 1px;
+				position: relative;
+				top: 0.2rem;
+				fill: white;
+			}
+
+			
+			.android {
+				height: 2rem;
+				width: 1.2rem;
+				right: 1px;
+				position: relative;
+				top: 0.5rem;
+				fill: white;
+			}
+
+			.museum-details {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-top: 10px;
+
+				@media screen and (min-width: $tablet-bp) {
+					align-items: flex-start;
+				}
+
+
+				@media screen and (min-width: $desktop-bp) {
+					line-height: 1;
+
+				}
+				.footer-hours, .footer-address-container, .footer-phone {
+					display: flex;
+					align-items: center;
+					// justify-content: center;
+
+				}
+
+				.footer-address-container {
+					padding: 15px 0;
+
+					.footer-address {
+						// padding-left: 10px;
+					}
+				}
+			}
+		}
+
+		.footer-about-museum::before {
+			content: '';
+		    display: block;
+		    top: 0;
+		    left: 0;
+		    width: 3.875rem;
+		    height: .2875rem;
+		    margin: 0 auto .5625rem;
+		    // background-color: $darkgray;
+
+		    @media #{$tablet} {
+			 	position: absolute;
+			    top: -10px;
+			    left: 0;
+			    width: .2875rem;
+			    height: 100%;
+			}
+			@media #{$desktop} {
+			  	position: absolute;
+			    top: 37px;
+			    left: 0;
+			    width: 0.2875rem;
+			    height: 80%;
+			}
+		}
+
+		.get-app {
+			@media screen and (min-width: $desktop-bp) {
+				justify-content: flex-start;
+
+				h1 {
+					padding-top: 20px;
+				}
+			}
+		}
+
+		.washington::before {
+			background-color: #ba0633;
+		}
+
+
+		.chantilly::before{
+		 	background-color: #2a9fc0;
+		}
+
+		.get-app::before {
+			background-color: #75b419;
+		}
+
+		.privacy {
+			font-family: $light-font;
+			font-size: .89rem;
+			@media #{$tablet} {
+			 	margin-bottom: 30px;
+    			margin-left: -77px;
+			}
+			@media #{$desktop} {
+			 	display: flex;
+			 	right: 5%;
+			 	bottom: 5%;
+			 	position: absolute;
+			 	align-self: flex-end;
+			}
+		}
+	}
+}
+

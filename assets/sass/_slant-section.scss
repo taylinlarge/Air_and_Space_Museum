@@ -1,0 +1,143 @@
+.slant-section {
+	width: 100%;
+
+	.row {
+		width: 100%;
+		display: flex;
+		height: 60vh;
+		
+		@media screen and (max-width: $desktop-bp) {
+			flex-wrap: wrap;
+			height: 90vh;
+		}
+
+		.slant__text {
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+			width: 50%;
+			color: $darkgray;
+		    padding: 0 5%;
+		    z-index: 5;
+
+		    @media screen and (max-width: $desktop-bp) {
+		    	width: 100%;
+				align-items: center;
+				text-align: center;
+				order: 2;
+			}
+
+			h2 {
+				font-size: 1.5em;
+				font-family: $reg-font;
+				margin-bottom: 15px;
+			}
+
+			p {
+				font-family: $light-font;
+				font-size: 0.9em;
+				line-height: 2;
+			}
+
+			.learn-button, .donate-button {
+			    display: flex;
+			    justify-content: center;
+			    align-items: center;
+			    width: 150px;
+			    margin-top: 15px;
+			    padding: 15px 15px;
+			    border: 1px solid $brand-blue;
+			    transition: all 0.3s linear;
+
+			    @media screen and (max-width: $tablet-bp) {
+			    	width: 100%;
+			    }
+
+			    &:hover {
+			    	background-color: $brand-blue;
+			    	color: white;
+			    }
+			}
+		}
+
+		.slant-img {
+			width: 50%;
+
+			@media screen and (max-width: $desktop-bp) {
+				width: 100%;
+			}
+		}
+
+		.slant-img-1 {
+			background-image: url(../img/learn.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			
+			@media screen and (max-width: $desktop-bp) {
+				background-position: center;
+			}
+		}
+
+		.slant-img-2 {
+			background-image: url(../img/donate.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+	}
+
+	.slant-1:before {
+	    content: '';
+	    position: absolute;
+	    display: inline-block;
+	    width: 50%;
+	    height: 15px;
+	    left: 0%;
+	    margin-top: -15px;
+	    background-color: white;
+	    // border-top: 1px solid black;
+	    // border-right: 1px solid black;
+	    box-shadow: 3px -3px 3px #E1E1E1;
+
+	    @media screen and (max-width: $desktop-bp) {
+			display: none;
+		}
+	}
+
+	.slant-2:before {
+	    content: '';
+	    position: absolute;
+	    display: inline-block;
+	    width: 50%;
+	    height: 15px;
+	    right: 0%;
+	    margin-top: -15px;
+	    background-color: white;
+	    box-shadow: -3px -1px 3px #E1E1E1;
+
+	    @media screen and (max-width: $desktop-bp) {
+			display: none;
+		}
+	}
+
+	.slant-slice-1 {
+		width: 80px;
+	    position: absolute;
+	    left: 50%;
+	    border-left: 100px solid white;
+	    border-top: 60vh solid transparent;
+	    @media screen and (max-width: $desktop-bp) {
+			display: none;
+		}
+	}
+
+	.slant-slice-2 {
+		width: 80px;
+	    position: absolute;
+	    right: 50%;
+	    border-right: 100px solid white;
+	    border-top: 60vh solid transparent;
+	    @media screen and (max-width: $desktop-bp) {
+			display: none;
+		}
+	}
+}
